@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ilyas - Creative Web Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-950 text-gray-100">
+    <!-- Navigation -->
+    <nav id="main-header" class="bg-transparent fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center py-2 px-2">
+                        <span class="font-extrabold text-2xl text-red-500 tracking-wide">Muhammad Ilyas</span>
+                    </a>
+                </div>
+                <!-- Desktop Navbar -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" id="home-nav-link" class="py-2 px-3 text-red-500 font-semibold border-b-2 border-red-500 transition duration-300 hover:text-red-400">Home</a>
+                    <a href="#about" id="about-nav-link" class="py-2 px-3 text-gray-300 hover:text-red-400 transition duration-300">About</a>
+                    <a href="#skills" id="skills-nav-link" class="py-2 px-3 text-gray-300 hover:text-red-400 transition duration-300">Skills</a>
+                    <a href="#portfolio" id="portfolio-nav-link" class="py-2 px-3 text-gray-300 hover:text-red-400 transition duration-300">Portfolio</a>
+                    <a href="#contact" id="contact-nav-link" class="py-2 px-3 text-gray-300 hover:text-red-400 transition duration-300">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <svg class="w-7 h-7 text-gray-300" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden mobile-menu md:hidden absolute w-full left-0 top-full shadow-lg rounded-b-lg">
+            <ul class="py-4">
+                <li><a href="#home" class="block text-sm px-6 py-3 text-red-500 font-semibold hover:bg-gray-800 transition duration-300">Home</a></li>
+                <li><a href="#about" class="block text-sm px-6 py-3 text-gray-300 hover:bg-gray-800 transition duration-300">About</a></li>
+                <li><a href="#skills" class="block text-sm px-6 py-3 text-gray-300 hover:bg-gray-800 transition duration-300">Skills</a></li>
+                <li><a href="#portfolio" class="block text-sm px-6 py-3 text-gray-300 hover:bg-gray-800 transition duration-300">Portfolio</a></li>
+                <li><a href="#contact" class="block text-sm px-6 py-3 text-gray-300 hover:bg-gray-800 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24 pb-12 bg-gray-950 overflow-hidden">
+        <div class="hero-circle-bg"></div>
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center px-6 relative z-10 text-center md:text-left">
+            <div class="md:w-1/2 flex flex-col items-center md:items-start mb-10 md:mb-0 animate-on-scroll">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">Hi, It's <span class="text-red-500">Muhammad Ilyas</span></h1>
+                <p class="text-xl md:text-3xl font-light mb-6 text-gray-300">I'm a <span class="font-semibold text-red-400">Creative Web Developer</span></p>
+                <p class="text-gray-400 mb-8 max-w-lg">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minus labore dolores esse.
+                    Odit similique doloribus tenetur doloremque, sunt commodi in ipsa repudiandae
+                    debitis deleniti quibusdam quaerat neque asperiores ea.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-red-700 transition duration-300 shadow-lg">Hire Me</a>
+                    <a href="#portfolio" class="bg-transparent border-2 border-red-500 text-red-500 px-8 py-3 rounded-full text-lg font-semibold hover:bg-red-500 hover:text-white transition duration-300 shadow-lg">Portfolio</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center animate-on-scroll">
+                <!-- Using the uploaded user image -->
+                <img src="foto_ku.jpg" onerror="this.onerror=null;this.src='https://placehold.co/384x384/667EEA/FFFFFF?text=Foto%20Anda';" alt="Professional portrait of Muhammad Ilyas, business casual attire smiling with arms crossed" class="rounded-full border-8 border-gray-800 shadow-2xl w-72 h-72 md:w-96 md:h-96 object-cover transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-100 animate-on-scroll">About <span class="text-red-500">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center animate-on-scroll">
+                    <div class="relative group">
+                        <img src="foto_ku.jpg" onerror="this.onerror=null;this.src='https://placehold.co/300x300/A78BFA/FFFFFF?text=Ilustrasi';" alt="Muhammad Ilyas working at a modern laptop in a bright office space" class="rounded-xl shadow-xl w-72 md:w-full transform transition-transform duration-500 group-hover:scale-105">
+                       <div class="md:w-1/2 flex justify-center animate-on-scroll">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-8 animate-on-scroll">
+                    <h3 class="text-3xl font-semibold mb-6 text-gray-100">Who am I?</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        I'm a passionate web developer with 5+ years of experience creating beautiful, functional websites. I specialize in front-end development but also have experience with back-end technologies. My goal is to build applications that are not only visually appealing but also provide an an exceptional user experience.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Outside of coding, I enjoy photography, hiking, and playing guitar. I believe that a well-rounded life outside of work makes me a better developer.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <p class="text-gray-200"><span class="font-semibold text-red-400">Name:</span> Muhammad Ilyas</p>
+                            <p class="text-gray-200"><span class="font-semibold text-red-400">Age:</span> 20</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-200"><span class="font-semibold text-red-400">Email:</span> Muhammad Ilyas@gmail.com</p>
+                            <p class="text-gray-200"><span class="font-semibold text-red-400">From:</span> Semarang, Jawa Tengah</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 shadow-lg">Download CV</a>
+                        <a href="#contact" class="border-2 border-red-500 text-red-500 px-8 py-3 rounded-full hover:bg-red-500 hover:text-white transition duration-300 shadow-lg">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-950">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-100 animate-on-scroll">My <span class="text-red-500">Skills</span></h2>
+            <div class="relative md:grid md:grid-cols-2 md:gap-12">
+                <!-- Vertical line for timeline on larger screens -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-700 transform -translate-x-1/2"></div>
+
+                <!-- Skills Timeline -->
+                <div class="md:col-span-2 space-y-12">
+                    <!-- Skill Item 1: Front-end Development -->
+                    <div class="flex flex-col md:flex-row items-start md:justify-between animate-on-scroll">
+                        <div class="md:w-1/2 md:pr-10 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg card">
+                                <div class="flex items-center justify-end mb-3">
+                                    <h3 class="text-xl font-semibold text-gray-100">Front-end Development</h3>
+                                    <div class="bg-red-600 p-2 rounded-full ml-4 shadow-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-red-400 font-medium mb-2">Expert Level (2 Years)</p>
+                                <p class="text-gray-300 leading-relaxed">Proficient in building responsive and interactive user interfaces using modern frameworks like React and Vue.js, along with strong HTML5 and CSS3 skills.</p>
+                                <p class="text-gray-500 text-sm mt-2">Technologies: HTML, CSS, JavaScript, React, Vue.js, Tailwind CSS</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-4 h-4 bg-red-500 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-10"></div>
+                        <div class="md:w-1/2 md:pl-10"></div>
+                    </div>
+
+                    <!-- Skill Item 2: Back-end Development -->
+                    <div class="flex flex-col md:flex-row items-start md:justify-between animate-on-scroll">
+                        <div class="md:w-1/2 md:pr-10 md:order-2 mb-6 md:mb-0">
+                            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg card">
+                                <div class="flex items-center justify-start mb-3">
+                                    <div class="bg-red-600 p-2 rounded-full mr-4 shadow-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-gray-100">Back-end Development</h3>
+                                </div>
+                                <p class="text-red-400 font-medium mb-2">Advanced Level (1+ Years)</p>
+                                <p class="text-gray-300 leading-relaxed">Experienced in building robust and scalable server-side applications and RESTful APIs using Node.js and Python frameworks.</p>
+                                <p class="text-gray-500 text-sm mt-2">Technologies: Node.js, Express.js, Python, RESTful APIs</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-4 h-4 bg-red-500 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-10"></div>
+                        <div class="md:w-1/2 md:pl-10 md:order-1"></div>
+                    </div>
+
+                    <!-- Skill Item 3: Database Management -->
+                    <div class="flex flex-col md:flex-row items-start md:justify-between animate-on-scroll">
+                        <div class="md:w-1/2 md:pr-10 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg card">
+                                <div class="flex items-center justify-end mb-3">
+                                    <h3 class="text-xl font-semibold text-gray-100">Database Management</h3>
+                                    <div class="bg-red-600 p-2 rounded-full ml-4 shadow-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7v10m0-10c0-2.21 3.582-4 8-4s8 1.79 8 4m0 0V7m0 10c0 2.21-3.582 4-8 4s-8-1.79-8-4m0 0V7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-red-400 font-medium mb-2">Proficient (1+ Years)</p>
+                                <p class="text-gray-300 leading-relaxed">Experience with relational and NoSQL databases, including schema design, query optimization, and data migration.</p>
+                                <p class="text-gray-500 text-sm mt-2">Technologies: PostgreSQL, MongoDB, MySQL, Firebase Firestore, JSON</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-4 h-4 bg-red-500 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-10"></div>
+                        <div class="md:w-1/2 md:pl-10"></div>
+                    </div>
+
+                    <!-- Skill Item 4: UI/UX Design -->
+                    <div class="flex flex-col md:flex-row items-start md:justify-between animate-on-scroll">
+                        <div class="md:w-1/2 md:pr-10 md:order-2 mb-6 md:mb-0">
+                            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg card">
+                                <div class="flex items-center justify-start mb-3">
+                                    <div class="bg-red-600 p-2 rounded-full mr-4 shadow-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-1.25-3M15 10V5a3 3 0 00-3-3H9a3 3 0 00-3 3v5m6 0h.01M12 12h.01M12 15h.01M12 18h.01" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-xl font-semibold text-gray-100">UI/UX Design</h3>
+                                </div>
+                                <p class="text-red-400 font-medium mb-2">Intermediate Level (5 Month)</p>
+                                <p class="text-gray-300 leading-relaxed">Understanding of user-centered design principles, wireframing, prototyping, and creating intuitive user experiences.</p>
+                                <p class="text-gray-500 text-sm mt-2">Tools: Figma, Adobe XD (basic), Wireframing, Prototyping</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-4 h-4 bg-red-500 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-10"></div>
+                        <div class="md:w-1/2 md:pl-10 md:order-1"></div>
+                    </div>
+
+                    <!-- Skill Item 5: Version Control & Deployment -->
+                    <div class="flex flex-col md:flex-row items-start md:justify-between animate-on-scroll">
+                        <div class="md:w-1/2 md:pr-10 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow-lg card">
+                                <div class="flex items-center justify-end mb-3">
+                                    <h3 class="text-xl font-semibold text-gray-100">Version Control & Deployment</h3>
+                                    <div class="bg-red-600 p-2 rounded-full ml-4 shadow-md">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h.01M12 15h.01M16 15h.01M13 17h.01M17 17h.01M19 17h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <p class="text-red-400 font-medium mb-2">Experienced</p>
+                                <p class="text-gray-300 leading-relaxed">Proficient with Git for collaborative development and familiar with various deployment strategies for web applications.</p>
+                                <p class="text-gray-500 text-sm mt-2">Tools: Git, GitHub, Docker, Netlify, Vercel</p>
+                            </div>
+                        </div>
+                        <div class="hidden md:block w-4 h-4 bg-red-500 rounded-full absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-0 z-10"></div>
+                        <div class="md:w-1/2 md:pl-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        < class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-100 animate-on-scroll">My <span class="text-red-500">Portfolio</span></h2>
+            <div class="flex justify-center mb-10 animate-on-scroll">
+                <div class="flex space-x-3 bg-gray-800 p-2 rounded-full shadow-inner">
+                    <button class="bg-red-600 text-white px-5 py-2 rounded-full text-sm font-medium filter-btn transition duration-300 hover:bg-red-700" data-filter="all">All</button>
+                    <button class="bg-transparent text-gray-300 px-5 py-2 rounded-full text-sm font-medium hover:bg-red-600 hover:text-white transition duration-300 filter-btn" data-filter="web">Web</button>
+                    <button class="bg-transparent text-gray-300 px-5 py-2 rounded-full text-sm font-medium hover:bg-red-600 hover:text-white transition duration-300 filter-btn" data-filter="app">App</button>
+                    <button class="bg-transparent text-gray-300 px-5 py-2 rounded-full text-sm font-medium hover:bg-red-600 hover:text-white transition duration-300 filter-btn" data-filter="design">Design</button>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="card portfolio-item animate-on-scroll" data-category="web">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/86f3dc85-0eb3-499b-b4ed-7303bbfa4259.png" alt="Modern e-commerce website design with clean layout and blue color scheme" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-100">E-Commerce Website</h3>
+                            <p class="text-gray-400 mt-2">A fully responsive online store built with React and Node.js</p>
+                            <a href="#" class="mt-4 inline-block text-red-500 hover:text-red-400 font-medium">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card portfolio-item animate-on-scroll" data-category="app">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7b3d9beb-2e1f-4f6b-8146-e7757a727a1d.png" alt="Mobile fitness tracking application with workout statistics dashboard" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-100">Fitness App</h3>
+                            <p class="text-gray-400 mt-2">Cross-platform mobile application for tracking workouts and nutrition</p>
+                            <a href="#" class="mt-4 inline-block text-red-500 hover:text-red-400 font-medium">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card portfolio-item animate-on-scroll" data-category="design">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2cbf2ed9-0d41-41b7-81e2-7941342544bc.png" alt="Minimalist branding design for a coffee shop with brown color palette" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-100">Branding Design</h3>
+                            <p class="text-gray-400 mt-2">Complete visual identity package for a local coffee shop</p>
+                            <a href="#" class="mt-4 inline-block text-red-500 hover:text-red-400 font-medium">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card portfolio-item animate-on-scroll" data-category="web">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0744c440-6384-40cb-a076-9bfb67a76c0c.png" alt="Corporate website homepage with blue and white color scheme and team photos" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-100">Corporate Website</h3>
+                            <p class="text-gray-400 mt-2">Official website for a financial services company</p>
+                            <a href="#" class="mt-4 inline-block text-red-500 hover:text-red-400 font-medium">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card portfolio-item animate-on-scroll" data-category="app">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/50696433-edc5-42c2-914d-28dfbb3d1e91.png" alt="Task management application interface with colorful categories and checklists" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-100">Task Manager</h3>
+                            <p class="text-gray-400 mt-2">Productivity app for organizing personal and team tasks</p>
+                            <a href="#" class="mt-4 inline-block text-red-500 hover:text-red-400 font-medium">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card portfolio-item animate-on-scroll" data-category="design">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/534eebb8-faba-4ece-a933-09c9336cad26.png" alt="Magazine layout design with bold typography and vibrant photography" class="w-full h-52 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-100">Magazine Layout</h3>
+                            <p class="text-gray-400 mt-2">Editorial design for a lifestyle magazine</p>
+                            <a href="#" class="mt-4 inline-block text-red-500 hover:text-red-400 font-medium">View Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12 animate-on-scroll">
+                <button class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 shadow-lg">Load More</button>
+            </div>
+                <div class="mt-12 max-w-xl mx-auto bg-gray-800 p-6 rounded-xl shadow-lg animate-on-scroll">
+    <h3 class="text-xl font-bold mb-4 text-gray-100">Add/Edit Portfolio Item</h3>
+    <form id="portfolio-form" class="space-y-4">
+        <input type="hidden" id="portfolio-id">
+        <div>
+            <label class="block text-gray-300 mb-1">Title</label>
+            <input type="text" id="portfolio-title" class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 text-gray-100" required>
+        </div>
+        <div>
+            <label class="block text-gray-300 mb-1">Category</label>
+            <select id="portfolio-category" class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 text-gray-100" required>
+                <option value="web">Web</option>
+                <option value="app">App</option>
+                <option value="design">Design</option>
+            </select>
+        </div>
+        <div>
+            <label class="block text-gray-300 mb-1">Image URL</label>
+            <input type="url" id="portfolio-image" class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 text-gray-100" required>
+        </div>
+        <div>
+            <label class="block text-gray-300 mb-1">Description</label>
+            <textarea id="portfolio-desc" class="w-full px-4 py-2 rounded bg-gray-900 border border-gray-700 text-gray-100" required></textarea>
+        </div>
+        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">Save</button>
+        <button type="button" id="portfolio-cancel" class="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700 transition hidden">Cancel</button>
+    </form>
+    </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-950">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-100 animate-on-scroll">Get In <span class="text-red-500">Touch</span></h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate-on-scroll">
+                    <h3 class="text-3xl font-semibold mb-8 text-gray-100">Contact Form</h3>
+                    <form class="space-y-6 bg-gray-900 p-8 rounded-xl shadow-xl">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2 font-medium">Full Name</label>
+                            <input type="text" id="name" class="w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 placeholder-gray-500" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2 font-medium">Email Address</label>
+                            <input type="email" id="email" class="w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Your Email" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-300 mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Subject" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="6" class="w-full px-5 py-3 rounded-lg border border-gray-700 bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition duration-300 w-full font-semibold shadow-lg">Send Message</button>
+                    </form>
+                </div>
+                <div class="animate-on-scroll">
+                    <h3 class="text-3xl font-semibold mb-8 text-gray-100">Contact Info</h3>
+                    <div class="space-y-8">
+                        <div class="flex items-start bg-gray-900 p-6 rounded-xl shadow-md">
+                            <div class="bg-red-600 p-4 rounded-full mr-5 shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-100 font-semibold text-xl">Location</h4>
+                                <p class="text-gray-400 mt-1">123 Main Street, San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-6 rounded-xl shadow-md">
+                            <div class="bg-red-600 p-4 rounded-full mr-5 shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-100 font-semibold text-xl">Phone</h4>
+                                <p class="text-gray-400 mt-1">(123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start bg-gray-900 p-6 rounded-xl shadow-md">
+                            <div class="bg-red-600 p-4 rounded-full mr-5 shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-gray-100 font-semibold text-xl">Email</h4>
+                                <p class="text-gray-400 mt-1">Muhammad Ilyas@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-3xl font-semibold mt-12 mb-8 text-gray-100">Follow Me</h3>
+                    <div class="flex space-x-5">
+                        <a href="#" class="bg-gray-800 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.232-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="bg-gray-800 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition duration-300 transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="text-2xl font-bold text-red-500">Muhammad Ilyas</span>
+                    <p class="text-gray-400 mt-2">Creative Web Developer</p>
+                </div>
+                <div class="flex flex-wrap justify-center space-x-6 md:space-x-8">
+                    <a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition duration-300">Skills</a>
+                    <a href="#portfolio" class="text-gray-400 hover:text-white transition duration-300">Portfolio</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-10 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Muhammad Ilyas. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

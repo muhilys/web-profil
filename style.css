@@ -1,0 +1,118 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background-color: #0A0A0A; /* Darker background for aesthetic feel */
+            color: #E0E0E0; /* Lighter text for contrast */
+            /* New: Subtle background pattern */
+            background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
+            background-size: 20px 20px; /* Adjust spacing of the pattern */
+        }
+        /* Custom backdrop-filter for blurred navbar */
+        .navbar-blurred {
+            background-color: rgba(25, 25, 25, 0.8); /* Darker transparent background */
+            backdrop-filter: blur(12px); /* Stronger blur effect */
+            -webkit-backdrop-filter: blur(12px); /* For Safari support */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+        }
+
+        /* Progress bar animation (kept for potential future use or if other progress bars exist) */
+        .progress-bar {
+            transition: width 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        /* Fade-in animation for sections and cards (only animates IN now) */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card hover effect */
+        .card:hover {
+            transform: translateY(-8px); /* Slightly more lift */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hero section specific styling for the red circle */
+        .hero-circle-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px; /* Adjust size as needed */
+            height: 500px; /* Adjust size as needed */
+            background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0.1) 50%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            animation: pulse 4s infinite alternate; /* Subtle pulsing animation */
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.7; }
+            100% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.9; }
+        }
+
+        /* Custom scrollbar for a sleek look */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Mobile menu specific styling */
+        .mobile-menu {
+            background-color: #1a1a1a; /* Dark background for mobile menu */
+        }
+        .mobile-menu a {
+            color: #E0E0E0;
+            border-bottom: 1px solid #333;
+        }
+        .mobile-menu a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Timeline styling for Skills section */
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem; /* Space for the line and dot */
+            margin-bottom: 2rem; /* Space between items */
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 1rem; /* Position of the vertical line */
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #4A4A4A; /* Darker gray line */
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: calc(1rem - 6px); /* Position of the dot */
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            background-color: #EF4444; /* Red dot */
+            border-radius: 50%;
+            border: 2px solid #0A0A0A; /* Match body background */
+            z-index: 1;
+        }
